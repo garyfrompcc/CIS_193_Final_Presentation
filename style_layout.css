@@ -1,0 +1,144 @@
+
+
+/* 
+html {
+    font: 12pt Arial;   
+    } 
+    
+
+    */
+    body {
+        width: 100vw;
+        margin: 0px auto;		
+    }
+        
+    h1 {
+        font-size: 1.2em;
+    }
+    
+    a,a:visited{
+        text-decoration: none;
+    }
+    
+    
+    header{
+        background-color: rgba(230, 255, 255,.85);
+    }
+    
+    
+    #logoImg{
+        height: 3em;
+        margin: .7em 20px;
+    }
+    /* navBar Box flexBox*/
+    #indexBg {
+        background-image: url(./img/campus.png);
+        background-attachment: fixed;
+        background-position: center;
+        background-size:cover;
+        
+        padding-bottom: 3em;
+    }
+    /* --------------------Content Div-------------------- */
+    #Content {
+        text-shadow:0px 0px 2px rgba(77, 77, 77,.6);
+        line-height: 2em;
+        margin-top: 3em;
+        min-height: 80vh;
+        background-color: 	rgba(247, 247, 247,0.7);
+        padding: 4em 2em;
+    }
+    
+    
+    
+    
+    
+    
+    /* --------------------three columns div-------------------- */
+    #threeColDiv{
+        background-color: 	rgb(247, 247, 247);
+    }
+    
+    /* #threeColDiv div{
+    
+    } */
+    
+    #threeColDiv h1:first-of-type {
+        text-align:center;
+        /* font-size: 1.2em; */
+    }
+    
+    #threeColDiv h2 {
+        /* text-align: center;
+        font-size: 1.5em; */
+        margin: 1em auto;
+    }
+    
+    #threeColDiv p{
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+    
+    #firstDiv{
+        background-color:rgba(233, 110, 80,.5);
+    }
+    #secondDiv{
+        background-color:rgba(218, 220, 224,1);
+    }
+    #thirdDiv{
+        background-color:rgba(102, 16, 242,.5);
+    }
+    
+    
+#threeColDiv div div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2vw;
+}
+#threeColDiv div div p{
+    font-size: 1.8em;
+}
+#threeColDiv div img{
+    display: block;
+    margin: 3em auto;
+}
+img[alt='bootstrap']{
+    max-height: 30%;
+}
+    
+    
+    /* --------------------footer-------------------- */
+    
+        #footer {
+        width: 100%;
+        /* height: 60px; */
+        background-color:rgb(128,128,128);
+        text-align: center;
+        line-height: 2em;
+        padding: 40px 20px 20px;
+        min-height: 5em;
+        }
+    
+        #footer i{
+            color: black;
+            font-size: 2em;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<!-- bootstrap cdn  -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+    
+    <link rel="stylesheet" href="./reset.css">
+    
+    <link rel="stylesheet" href="./style.css">
+    
+    <script src="https://kit.fontawesome.com/5c8f48ac11.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="api_key.js"></script>
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    <div id="indexBg">
+    <header >
+        <nav class="navbar navbar-light navbar-expand-lg ">
+            <div class="container-fluid  ">
+                <a href="./index.html"><img src="./img/logo2.png" class="navbar-nav" style="width:20vw"></a>
+            
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse mx-auto" id="navbarNav">   
+                    <ul class="navbar-nav mx-auto text-dark ">
+                        <li class="nav-item active"><a class="nav-link text-dark " href="./index.html">Home</a></li>
+                        <li class="nav-item "><a class="nav-link text-dark" href="./about.html">About</a></li>
+                        <li class="nav-item "><a class="nav-link text-dark" href="https://openweathermap.org/api" target="_blank" rel="noopener noreferrer" >OpenWeather API</a></li>
+                        <li class="nav-item "><a class="nav-link text-dark" href="https://developers.google.com/maps" target="_blank" rel="noopener noreferrer">GMap API</a></li>
+                        <li class="nav-item "><a class="nav-link text-dark" href="https://getbootstrap.com/" target="_blank " rel="noopener noreferrer">Bootstrap</a></li>
+                        <li class="nav-item "><a class="nav-link text-dark" href="./contactus.html">Contact Us</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link py-0" href="https://pasadena.edu/"  target="_blank " rel="noopener noreferrer" ><button class="btn btn-info my-0">PCC</button></a></li> -->
+                    </ul>
+                    <a class="navbar-nav py-0" href="https://pasadena.edu/"  target="_blank " rel="noopener noreferrer" ><button class="btn btn-info my-0 rounded-pill">PCC</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+<!-- Content div -->
+<div id="topContent" class="container">
+    <div id="topContentWrapper" class="row text-center align-middle ">
+        <div class="col-xs-12 mx-auto">
+            <h1>Enter 2 zip codes for 2 locations, to compare the weather for today and tomorrow.</h1>
+            <form id="metricSelect">
+                <legend>Select fahrenheit or celcius:</legend>
+                <input type="radio" id="celcius" name="metricSelect" value="metric">
+                <label for="celcius">Celcius</label>
+                <input type="radio" id="farenheit" name="metricSelect" value="Imperial" checked>
+                <label for="farenheit">Farenheit</label><br>
+
+
+                <label for="firstZip" >Please enter Zip Code for first location:</label>
+                <input type="text" name="firstZip" id="firstZip" placeholder="5 digits zip code for first Location" size="5" minlength="5" maxlength="5" pattern="[0-9][0-9][0-9][0-9][0-9]"><br>
+                
+            
+                <label for="secondZip">Please enter Zip Code for second location:</label>
+                <input type="text" name="secondZip" id="secondZip" placeholder="5 digits zip code for first Location"  size="5" minlength="5" maxlength="5" pattern="\d{5}">
+                <br>
+                <button type="button" id="compareBtn" value="Compare" class="btn btn-primary">Compare</button> 
+            </form>
+        </div>
+        
+        <h1 class="mx-auto">Current Weather information at:  <span id="queryTime"></span></h1>
+            
+        <div id="compareDiv" class="row col-xs-12 mx-auto">
+            <div class="col-sm-6 text-center">
+                <div id="firstLocationDiv" ></div>
+                <div id="mapContainer1"></div>
+            </div>
+            <div class="col-sm-6 text-center">
+                <div id="secondLocationDiv"></div>
+                <div id="mapContainer2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+    <!-- Three column div -->
+    <div id="threeColDiv" class="container-fluid">
+        <h1 class="pt-5 mb-4 display-3">Api and Framework used in this website</h1>
+        <div class="row  text-center ">
+            <div id="firstDiv" class="col-md ">
+                <h2 class="display-5">OpenWeather API</h2>
+                <p >OpenWeather platform is a set of elegant and widely recognisable APIs. Powered by convolutional machine learning solutions, it is capable of delivering all the weather information necessary for decision-making for any location on the globe. </p>
+                <img src="./img/openweatherapi.png" class="img-fluid " alt="openWeatherAPI" >
+            </div>
+            <div id="secondDiv" class="col-md">
+                <h2 class="display-5">Google Map API</h2>
+                <p >Create real-world, real-time experiences with the latest Maps, Routes, and Places features from Google Maps Platform. Built by the Google team for developers everywhere.</p>
+                <img src="./img/gmapapi.jpg" class="img-fluid " alt="gmapapi" >
+            </div>
+            <div id="thirdDiv" class=" col-md ">
+                <h2 class="display-5">Bootstrap</h2>
+                <p >Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                <img src="./img/bootstrap.jpg" class="img-fluid " alt="bootstrap" >
+            </div>
+        </div>
+    </div>
+
+    <!-- footer div -->
+    <footer>
+        <div id="footer">
+            <p style="display: inline-block;">More at: </p>
+            <a href="https://twitter.com/pcclancer" target="_blank" rel="noopener noreferrer" ><i class="fab fa-twitter-square"></i></a>
+            <!-- <a href="" target="_blank" rel="noopener noreferrer" ><i class="fab fa-google-plus-square"></i></a> -->
+            <a href="https://www.facebook.com/pasadenacitycollege" target="_blank" rel="noopener noreferrer" ><i class="fab fa-facebook-square"></i></a>
+            <a href="https://instagram.com/pcclancer" target="_blank" rel="noopener noreferrer" ><i class="fab fa-instagram-square"></i></a>
+            <a href="https://www.linkedin.com/school/pasadenacitycollege/" target="_blank" rel="noopener noreferrer" ><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/pcclancer" target="_blank" rel="noopener noreferrer" ><i class="fab fa-youtube-square"></i>
+            <a href="https://pasadena.edu/about/campus-maps.php" target="_blank" rel="noopener noreferrer" ><i class="fas fa-map-marker-alt"></i></a>
+            <a href="mailto:helpdesk@pasadena.edu" target="_blank" rel="noopener noreferrer" ><i class="fas fa-envelope"></i></a>
+            <p> Copyright&copy; 2021 Pasadena City College, Spring 2021 CIS 193. All Rights Reserved.</p>
+
+        </div>
+    </footer>
+</body>

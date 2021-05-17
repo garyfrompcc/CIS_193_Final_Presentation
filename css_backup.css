@@ -1,0 +1,120 @@
+
+/* navBar */
+div#navBar {
+    height: auto;
+    width: 100%;
+    margin: 0px auto;	
+}
+
+/* navBar Box flexBox*/
+div#navBar ul {
+    width: 100%;	
+    display: flex;
+    flex-direction: row;
+    height: 8vh;
+    max-height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    flex-wrap:nowrap;
+
+
+}
+
+/* navBar Box flexBox*/
+#navList{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#navLinkWrapper {
+    flex-basis: auto;
+}
+.navListLinks a{
+    margin: 1em;
+}
+
+
+#navLinkList a, a:active, a:visited, a:hover {
+    color: black;
+}
+
+#logoImg {
+    height: 3em;
+    margin: 0 20px;
+}
+    
+    
+#pccLink button{
+    width: 10em;
+    margin-right: 3vw ;
+}
+
+
+
+
+/* --------------------footer-------------------- */
+#threeColDiv{
+    padding: 0 3%;
+    padding-bottom: 3%;
+    background-color: 	rgb(247, 247, 247);
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    justify-content: space-between;
+    align-content:center;
+}
+
+#threeColDiv div{
+    width: 30vw;
+    min-height: 340px;
+    padding: 10px;
+}
+
+#threeColDiv h1:first-of-type {
+    margin: 50px auto ;
+    grid-column: span 3;
+    text-align:center;
+    font-size: 1.2em;
+}
+
+#threeColDiv h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 1em auto;
+}
+
+#threeColDiv p{
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    
+}
+
+#firstDiv{
+    background-color:rgba(233, 110, 80,.5);
+}
+#secondDiv{
+    background-color:rgba(218, 220, 224,1);
+}
+#thirdDiv{
+    background-color:rgba(102, 16, 242,.5);
+}
+
+#threeColDiv div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#threeColDiv div img{
+    display: block;
+    max-width:90%;
+    max-height:13em;
+    margin: 20px auto;
+    height: auto;
+    
+}
